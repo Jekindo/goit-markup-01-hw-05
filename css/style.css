@@ -562,6 +562,9 @@ ul {
   justify-content: center;
   width: 44px;
   height: 44px;
+
+  transition: background-color 250ms var(--timing-function),
+  color 250ms var(--timing-function);
 }
 
 .team-social-list .social-link:hover,
