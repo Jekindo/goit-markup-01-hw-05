@@ -759,6 +759,10 @@ ul {
   background-color: var(--accent-color);
 } */
 
+
+
+
+
 /*!  PORTFOLIO */
 .portfolio .section-title {
   display: none;
@@ -785,6 +789,10 @@ ul {
 
   display: inline-block;
   padding: 6px 22px;
+
+  transition: color 250ms var(--timing-function),
+  background-color 250ms var(--timing-function),
+  box-shadow 250ms var(--timing-function);
 }
 
 .filter .radio-button:not(:last-child) {
@@ -799,6 +807,8 @@ ul {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+
+
 /*? Примеры работ */
 .works-list {
   display: flex;
@@ -810,6 +820,8 @@ ul {
   background-color: #fff;
 
   flex-basis: calc((100% - 2 * var(--card-set-gap)) / 3);
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .works-list > .item:hover {
@@ -840,9 +852,10 @@ ul {
 
   width: 100%;
   height: 100%;
+  padding: 24px;
 
   transform: translateY(100%);
-  transition: transform 0.2s linear;
+  transition: transform 250ms var(--timing-function) ;
 
   background-color: rgba(33, 150, 243, 0.9);
 }
@@ -852,8 +865,6 @@ ul {
 
   font-size: 18px;
   line-height: 1.56;
-
-  padding: 24px;
 }
 
 .item-body {
