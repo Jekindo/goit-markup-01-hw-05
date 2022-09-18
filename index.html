@@ -25,18 +25,6 @@
             <ul class="site-nav list">
               <li class="item">
                 <a href="./index.html" class="nav-link nav-link--active link">Студия</a>
-
-				<ul class="submenu list">
-					<li class="item">
-						<a class="link" href="">Наши работы</a>
-					</li>
-					<li class="item">
-						<a class="link" href="">Сотрудники</a>
-					</li>
-					<li class="item">
-						<a class="link" href="">Рассписание</a>
-					</li>
-				</ul>
               </li>
               <li class="item"><a href="./portfolio.html" class="nav-link link">Портфолио</a></li>
               <li class="item"><a href="#" class="nav-link link">Котакты</a></li>
@@ -64,6 +52,8 @@
       </div>
     </header>
     <main>
+
+
       <!--! Герой -->
       <section class="hero">
         <div class="container">
@@ -71,7 +61,17 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="#" class="hero-button button link">Заказать услугу</a>
+          <button data-modal-open class="hero-button button link">Заказать услугу</button>
+		  
+		  <div data-modal class="backdrop is-hidden">
+			<div class="modal">
+				<button data-modal-close  class="modal-close">
+					<svg class="icon-close">
+						<use href="./images/icons/svg-sprite-optimized.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		  </div>
         </div>
       </section>
 
@@ -135,9 +135,16 @@
           <ul class="activities-list list">
             <li class="item">
               <img src="./images/keyboard.jpg" alt="Руки на клавиатуре" width="370" />
+			  <p class="description">Десктопные приложения</p>
             </li>
-            <li class="item"><img src="./images/phone.jpg" alt="Телефон" width="370" /></li>
-            <li class="item"><img src="./images/tablet.jpg" alt="Планшет" width="370" /></li>
+            <li class="item">
+				<img src="./images/phone.jpg" alt="Телефон" width="370" />
+				<p class="description">Мобильные приложения</p>
+			</li>
+            <li class="item">
+				<img src="./images/tablet.jpg" alt="Планшет" width="370" />
+				<p class="description">Дизайнерские решения</p>
+			</li>
           </ul>
         </div>
       </section>
@@ -394,6 +401,7 @@
       </div>
     </footer>
 
+	<script src="./js/modal.js"></script>
     <script>
       console.log(document.querySelector(".header").getBoundingClientRect().height);
 
